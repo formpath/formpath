@@ -1,0 +1,22 @@
+{
+  "name": "formpath",
+  "version": "1.0.0",
+  "description": "A single-page documentation site for From Path JS. It showcases installation, tutorials, fundamentals, and API usage, built as a static HTML page styled with Tailwind CSS via CDN.",
+  "main": "src/FormPath.js",
+  "scripts": {
+    "dev": "vite",
+    "build:site": "vite build",
+    "build:package": "vite build --config vite.lib.config.mjs",
+    "build": "npm run build:site && npm run build:package",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "vite": "^5.4.8"
+  }
+}

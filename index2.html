@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation | FormFlow JS</title>
+    <title>Documentation | FormPath JS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
@@ -64,7 +64,7 @@
                             <div class="bg-indigo-600 p-1.5 rounded-lg text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                             </div>
-                            <span class="text-xl font-extrabold tracking-tight">FormFlow<span class="text-indigo-600">JS</span></span>
+                            <span class="text-xl font-extrabold tracking-tight">FormPath<span class="text-indigo-600">JS</span></span>
                         </div>
                     </div>
 
@@ -104,7 +104,7 @@
                         View Discovery Logic
                     </a>
                     <div class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white text-slate-900 border border-slate-200 font-mono text-sm shadow-sm">
-                        cdn.js/formflow-js
+                        cdn.js/FormPath-js
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
                 <section id="discovery" class="mb-24">
                     <h2 class="text-3xl font-bold mb-4 flex items-center gap-3">Form Discovery</h2>
                     <p class="text-slate-600 mb-8 max-w-2xl">
-                        By default, FormFlow JS performs a global scan of the DOM and observes every <code>&lt;form&gt;</code> tag it finds. 
+                        By default, FormPath JS performs a global scan of the DOM and observes every <code>&lt;form&gt;</code> tag it finds. 
                         However, you can explicitly target specific forms to optimize performance or separate concerns.
                     </p>
                     
@@ -166,14 +166,14 @@
                             <h4 class="text-sm font-bold text-indigo-700 mb-2">Default Behavior</h4>
                             <p class="text-xs text-slate-500 mb-4">Automatically attaches listeners to all forms on the page.</p>
                             <div class="code-block py-2">
-                                <pre>new FormFlow();</pre>
+                                <pre>new FormPath();</pre>
                             </div>
                         </div>
                         <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
                             <h4 class="text-sm font-bold text-indigo-700 mb-2">Targeted Selection</h4>
                             <p class="text-xs text-slate-500 mb-4">Provide an array of IDs to limit the scope of the library.</p>
                             <div class="code-block py-2">
-                                <pre>new FormFlow({
+                                <pre>new FormPath({
   formIds: ['user-settings', 'billing-info']
 });</pre>
                             </div>
@@ -185,7 +185,7 @@
                 <section id="storage-engine" class="mb-24">
                     <h2 class="text-3xl font-bold mb-4 flex items-center gap-3">IndexedDB Engine</h2>
                     <p class="text-slate-600 mb-8 max-w-2xl">
-                        Unlike LocalStorage which has a 5MB limit and blocks the main thread, FormFlow uses <strong>IndexedDB</strong> for asynchronous, high-capacity persistence.
+                        Unlike LocalStorage which has a 5MB limit and blocks the main thread, FormPath uses <strong>IndexedDB</strong> for asynchronous, high-capacity persistence.
                     </p>
                     
                     <div class="p-8 bg-slate-900 rounded-3xl text-slate-300">
@@ -195,7 +195,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-bold mb-1">Object Store Architecture</h4>
-                                <p class="text-sm opacity-70">The database <code>FormFlowDB</code> contains a single object store <code>formData</code> where each entry is indexed by its <strong>HTML Form ID</strong>.</p>
+                                <p class="text-sm opacity-70">The database <code>FormPathDB</code> contains a single object store <code>formData</code> where each entry is indexed by its <strong>HTML Form ID</strong>.</p>
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
@@ -231,7 +231,7 @@
                         </div>
                         <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
                             <h4 class="text-sm font-bold mb-3">Global Wipe</h4>
-                            <p class="text-sm text-slate-500 mb-4">Clears every single piece of data stored in the FormFlow object store.</p>
+                            <p class="text-sm text-slate-500 mb-4">Clears every single piece of data stored in the FormPath object store.</p>
                             <div class="code-block">
                                 <pre>ff.clearData(); // No arguments clears all</pre>
                             </div>
@@ -267,7 +267,7 @@
                 </section>
 
                 <footer class="pt-12 border-t border-slate-100 text-slate-400 text-sm flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <span>&copy; 2026 FormFlow JS Core Team.</span>
+                    <span>&copy; 2026 FormPath JS Core Team.</span>
                 </footer>
             </main>
         </div>
