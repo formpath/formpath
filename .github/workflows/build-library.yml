@@ -3,7 +3,7 @@ name: build-library
 on:
   push:
     branches:
-      - "**"
+      - main
 
 jobs:
   build-formpath:
@@ -27,4 +27,9 @@ jobs:
         run: pnpm install
 
       - name: Build library
-        run: pnpm --filter formpath build
+        run: pnpm build
+
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
