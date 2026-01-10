@@ -1,92 +1,32 @@
-# FormPath JS Documentation
+# FormPath JS
 
-A single-page documentation site for FormPath JS. It showcases installation, tutorials, fundamentals, and API usage, built as a static HTML page styled with Tailwind CSS via CDN.
+FormPath JS is a vanilla JavaScript library that maps form input names into nested JSON
+structures and persists them in IndexedDB for reactive, durable form state.
 
-## Overview
+## Install
 
-The page is organized in the following order:
-
-1. Get Started
-2. Tutorials
-3. Fundamentals
-4. API
-
-## Quick Install
-
-Add the CDN script tag:
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FormPath-js/3.2.0/FormPath.min.js"></script>
+```bash
+pnpm add formpath
 ```
 
-Basic usage:
-
-```html
-<script>
-  // It initializes automatically on DOMReady
-  const ff = new FormPath({
-    onChange: (data) => console.log('Live Data:', data)
-  });
-</script>
-```
-
-## Tutorials
-
-- Simple Form
-- Multipane Tracking
-- Dynamic Arrays
-
-## Fundamentals
-
-- Form Discovery
-- Path Mapping Logic
-- IndexedDB Engine
-
-## API
-
-Data access example:
+## Usage
 
 ```js
-// Get all data from IndexedDB
-const allData = await ff.getAllData();
+import FormPath from 'formpath';
 
-// Access specific section
-const profile = allData['profile-form'];
+const ff = new FormPath({
+  onChange: (data) => console.log('Live Data:', data)
+});
 ```
 
-Clearing data examples:
-
-```js
-ff.clearData(['registration-form']);
-ff.clearData(); // No arguments clears all
-```
-
-## Run Locally
-
-Open `index.html` in your browser.
-
-## Build
-
-Install dependencies, then run:
+## Build the library
 
 ```bash
-npm install
-npm run build
+pnpm install
+pnpm build
 ```
 
-The output is generated in `dist/` with the site HTML plus the compiled package files.
+## Site and examples
 
-To build only one target:
-
-```bash
-npm run build:site
-npm run build:package
-```
-
-## Deploy (GitHub Pages)
-
-```bash
-npm run deploy
-```
-
-This publishes the `dist/` folder using `gh-pages`.
+The landing page and example suite live in the `formpath.github.io` package at the
+repository root.
