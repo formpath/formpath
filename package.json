@@ -6,7 +6,7 @@
   "module": "dist/formpath.es.js",
   "exports": {
     ".": {
-      "import": "./src/formpath.js",
+      "import": "./dist/formpath.es.js",
       "require": "./dist/formpath.umd.js"
     }
   },
@@ -20,6 +20,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/formpath/formpath.git"
+  },
+  "homepage": "https://formapth.js.org",
+  "bugs": {
+    "url": "https://github.com/formpath/formpath/issues"
+  },
   "devDependencies": {
     "vite": "^5.4.8"
   }
