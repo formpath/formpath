@@ -24,7 +24,7 @@
     "type": "git",
     "url": "https://github.com/formpath/formpath.git"
   },
-  "homepage": "https://formapth.js.org",
+  "homepage": "https://formpath.js.org",
   "bugs": {
     "url": "https://github.com/formpath/formpath/issues"
   },
